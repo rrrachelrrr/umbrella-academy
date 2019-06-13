@@ -1,0 +1,21 @@
+<% if flash[:errors] %>
+<ul>
+  <% flash[:errors].each do |err_m| %>
+  <li>
+    <%= err_m %>
+    </li>
+    <% end %>
+    </ul>
+<% end  %>
+
+<%= form_for @child do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :age %>
+<%= f.number_field :age %>
+<%= f.label :strenth %>
+<%= f.number_field :strength %>
+<%= f.submit %>
+<% end %>
+
+<%= link_to "Children", children_path %>

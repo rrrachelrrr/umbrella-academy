@@ -1,0 +1,13 @@
+<h3>ALL THE POWERS</H3>
+
+<ul>
+<% @powers.each do |power| %>
+<li>
+<%= link_to power.name, power %><br>
+Works like this: <%= power.description %>.<br>
+It hurts this much: <%= power.damage %>
+</li>
+<% end %>
+</ul>
+
+<%= link_to "Make a New Power", new_power_path %>

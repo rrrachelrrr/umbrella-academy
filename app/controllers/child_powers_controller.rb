@@ -1,0 +1,2 @@
+class ChildPowersController < ApplicationController
+end

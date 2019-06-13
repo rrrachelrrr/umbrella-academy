@@ -1,0 +1,14 @@
+<h3><%= @child.name  %> is <%= @child.age %> years old and is <%= @child.strength %> strong!!!</h3>
+
+Here are <%= @child.name %>'s special abilities!!<br>
+
+<ul>
+  <% @child.powers.each do |power| %>
+  <li>
+    <%= power.name %>
+    </li>
+    <% end %>
+    </ul>
+
+<%= link_to "The Umbrella Academy☔︎", children_path %>
+<%= button_to "Delete #{@child.name}", @child, method: :delete %>

@@ -1,0 +1,12 @@
+<h2>TOTALLY NORMAL STUDENTS WHO DEFINITELY DON'T HAVE POWERS</H2>
+  <ul>
+  <% @children.each do |child| %>
+  <li>
+  Name: <%= link_to child.name, child %>
+  Age: <%= child.age %>
+  Strength (this is normal to know):<%= child.strength %>
+  </li>
+  <% end %>
+  </ul>
+
+  <%= link_to "Create A Child", new_child_path %>
